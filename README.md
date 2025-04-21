@@ -37,7 +37,6 @@ Resource Terraform для Yandex Cloud:
 Инфраструктуру создавал с помощью terraform.
 
 <details>
-
 <summary>[Манифест `providers.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/providers.tf):</summary>
 
 ```tf
@@ -58,7 +57,7 @@ provider "yandex" {
 }
 ```
 
-</detail>
+</details>
 
 <details>
 
