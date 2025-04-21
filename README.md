@@ -65,7 +65,7 @@ provider "yandex" {
 
 [`variables.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/variables.tf)
 
-```
+```tf
 variable "ssh_key_path" {
   description = "Path to SSH public key"
   type        = string
@@ -95,7 +95,7 @@ variable "token" {
 
 [`main.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/main.tf)
 
-```
+```tf
 # 1. Создание VPC
 resource "yandex_vpc_network" "my-vpc" {
   name = "my-vpc"
