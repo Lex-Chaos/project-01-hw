@@ -37,7 +37,7 @@ Resource Terraform для Yandex Cloud:
 Инфраструктуру создавал с помощью terraform.
 
 <details>
-<summary>[Манифест `providers.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/providers.tf):</summary>
+<summary> [Манифест `providers.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/providers.tf): </summary>
 
 ```tf
 terraform {
@@ -56,12 +56,10 @@ provider "yandex" {
   zone      = "ru-central1-a"
 }
 ```
-
 </details>
 
 <details>
-
-<summary>[Манифест `variables.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/variables.tf):</summary>
+<summary> [Манифест `variables.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/variables.tf): </summary>
 
 ```
 variable "ssh_key_path" {
@@ -86,12 +84,10 @@ variable "token" {
   sensitive   = true
 }
 ```
-
 </details>
 
 <details>
-
-<summary>[Манифест `main.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/main.tf):</summary>
+<summary> [Манифест `main.tf`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/main.tf): </summary>
 
 ```
 # 1. Создание VPC
@@ -216,12 +212,10 @@ output "private_vm_ip" {
   value = yandex_compute_instance.private-vm.network_interface.0.ip_address
 }
 ```
-
 </details>
 
 <details>
-
-<summary>Переменные среды задал с помощью скрипта [`yasettings.sh`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/yasettings.sh):</summary>
+<summary> Переменные среды задал с помощью скрипта [`yasettings.sh`](https://github.com/Lex-Chaos/project-01-hw/blob/main/files/yasettings.sh) :</summary>
 
 ```bash
 #!/bin/bash
@@ -237,7 +231,6 @@ echo "TF_VAR_token:    $TF_VAR_token"
 echo "TF_VAR_cloud_id: $TF_VAR_cloud_id"
 echo "TF_VAR_folder_id: $TF_VAR_folder_id"
 ```
-
 </details>
 
 Создание инфраструктуры:
